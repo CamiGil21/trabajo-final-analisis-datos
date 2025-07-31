@@ -1,0 +1,65 @@
+Informe Final 
+Hábitos, bienestar y nivel de estrés.
+
+Este informe corresponde al análisis de un conjunto de datos que muestra los hábitos diarios, como las horas de
+sueño, tiempo frente a pantallas etc. de un grupo de personas, y cómo pueden estar relacionados con el nivel de
+estrés o de felicidad de la muestra. 
+Para ello, se realizó un proceso de limpieza de datos, seguido por un analisis estadístico univariado y 
+bivariado, complementando con gráficos que permiten interpretar mejor la relación existente entre las variables.
+Además, se realizó un dashboard interactivo en Power BI que permite explorar los resultados filtrando por género, 
+país y otros criterios.
+
+-Limpieza
+Se revisó el dataset original y no se encontraron datos nulos ni duplicados, las variables estaban bien 
+expresadas y me aseguré de que todo estuviera en minúsculas. 
+Al analizar uno de los gráficos, pude observar que algunos valores de la columna "screen_time" estaban
+expresados con números negativos lo cual no podía ser posible. Conté cuántos filas tenía con este problema
+y al ver que era menos del 1% del total de la muestra decidí eliminarlos para evitar alteraciones en mi análisis.
+
+-Analisis univariado y bivariado
+
+Horas de sueño: Se observa que en promedio los encuestados duermen 6,96 horas por día, observándose también
+muchos casos con menos de 6 horas de sueño.
+
+Edad: En promedio los encuestados tienen aproximadamente 41 años. Las edades mínimas y máximas registradas son 
+de 18 y 64 años respectivamente.
+
+Tiempo frente a pantallas: El tiempo promedio frente a pantallas es de 6 horas. En este caso, se realizó un 
+histograma de frecuencias acumuladas y se observó que el 50% de los encuestados pasa 6 o mas horas frente a una 
+pantalla. 
+
+Nivel de estrés: En una escala del 1 al 10, el nivel promedio de estrés es de 5,5 puntos. Se realizó un gráfico
+para observar el nivel de estrés segun el género y se observó que los hombres presentan un nivel de estres más
+alto con un promedio de 5,6 aproximadamente, seguido por las mujeres con un promedio aproximado de 5,5 y por,
+último, con el nivel de estres más bajo se encuentran las personas no binarias con un promedio de 5,2
+aproximadamente.
+
+Nivel de felicidad: El nivel promedio de la felicidad es de 5,5 puntos en una escala del 1 al 10. En cuanto
+a la conexión entre días de ejercicios y nivel de felicidad, no se evidencia una relación lineal directa 
+en esta muestra, lo que me lleva a pensar que la felicidad podría depender de una combinación más compleja de 
+hábitos.
+
+Días de ejercicios: En promedio, los encuestados se ejercitan 3 días aproximadamente. Se realizó un gráfico
+de barras y se puede constatar que al menos el 25% de los encuestados tiene una actividad física inexistente
+o mínima (1 día).
+
+Más pantalla que sueño: Se observa que más del 37% de la muestra, pasa más tiempo frente a una pantalla que 
+durmiendo.
+Se realiza un gráfico boxplot para analizar la relación que tiene este fenómeno con el estrés y se puede 
+contemplar que existe un mayor nivel de estrés en las personas que pasan más horas frente a una 
+pantalla que durmiendo, con respecto a las personas que duermen más tiempo del que estan frente a una pantalla.
+El gráfico muestra que el 50% de los encuestados que pasan más tiempo frente a una pantalla que durmiendo,
+presentan un nivel de estrés igual o superior a 6 puntos aproximadamente. 
+Esto también se puede apreciar claramente en el gráfico de barras que muestra el nivel de estrés por grupo de
+ratio que se encuentra en el dashboard de Power BI, que muestra que las personas con un ratio screen/sleep alto
+tienden a tener un mayor nivel de estrés.
+
+Personas en riesgo: Para definir cuándo una persona está en riesgo, se puso como parámetro los promedios de:
+"screen_time", "hours_sleep" y "stress_level". Las personas con "screen_time" > 6, "hours_sleep" < 7 y 
+"stress_level" > 6 serán consideradas personas de riesgo. 
+Teniendo en cuenta los parámetros anteriormente mencionados, se observa que casi el 10,5% de la muestra, 
+está en riesgo.
+
+El csv se guardó finalmente con el nombre de EncuestaBienestarLimpioActualizada.csv
+
+
